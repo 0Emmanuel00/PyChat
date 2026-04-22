@@ -3,7 +3,7 @@ import threading
 import json
 from datetime import datetime
 
-HOST = "192.168.1.89"
+HOST = "192.168.1.89" # A Changer selon votre adresse IP locale pour le serveur
 PORT = 5555
 BUFFER = 4096
 
@@ -40,10 +40,11 @@ def handle_message(data: bytes, addr: tuple):
             clients[addr] = pseudo
         print(f"[+] {pseudo} connecté depuis {addr}")
 
-        # Confirme la connexion au nouveau client
+        # Confirme la connexion au nouveau client (avec le compteur)
         sock.sendto(json.dumps({
             "type": "info",
-            "content": f"Bienvenue {pseudo} ! {len(clients)} utilisateur(s) en ligne."
+            "content": f"Bienvenue {pseudo} ! {len(clients)} utilisateur(s) en ligne.",
+            "count": len(clients)
         }).encode(), addr)
 
         # Annonce aux autres
