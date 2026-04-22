@@ -135,7 +135,7 @@ pychat/
 
 ## 👨‍💻 Auteur
 
-Projet développé par **Emmanuel Haron**
+Projet développé par **0Emmanuel00**
 
 ---
 
