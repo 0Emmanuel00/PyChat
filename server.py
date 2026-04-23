@@ -3,7 +3,7 @@ import threading
 import json
 from datetime import datetime
 
-HOST = "192.168.1.89" # A Changer selon votre adresse IP locale pour le serveur
+HOST = "192.168.1.21" # A Changer selon votre adresse IP locale pour le serveur
 PORT = 5555
 BUFFER = 4096
 
